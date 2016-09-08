@@ -149,7 +149,7 @@ section {
   #contact .join-button a:hover {
     background-color: #EFEFEF; }
 
-@media (min-width: 1025px) {
+@media (min-width: 769px) {
   #contact .join-button a {
     font-size: 150%;
     width: 30%; } }
