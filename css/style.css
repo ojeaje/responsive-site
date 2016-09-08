@@ -1,0 +1,168 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Averia+Gruesa+Libre);
+/* Base
+------------------------------------------------------------*/
+html {
+  font-size: 62.5%; }
+
+body {
+  color: #4c4c4c;
+  font-size: 1.4rem;
+  font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #3A3837; }
+
+a {
+  color: #931B3A;
+  text-decoration: none; }
+  a:visited {
+    color: #681329; }
+  a:hover {
+    color: #a91f43; }
+  a:active {
+    color: #681329; }
+
+#works > h2 {
+  color: #fdfcf6; }
+
+#works > h2 {
+  font-size: 250%;
+  letter-spacing: 2rem; }
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center; }
+
+/* Layout
+------------------------------------------------------------*/
+.block-center, header .site-title, .photo, section .container, #works i, #contact, #contact .join-button a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* Font
+------------------------------------------------------------*/
+.Averia, #works h3 {
+  font-family: 'Averia Gruesa Libre', cursive; }
+
+.uppercase, #works h3 {
+  text-transform: capitalize;
+  /*大文字表示・小文字表示を指定*/ }
+
+/* Header
+------------------------------------------------------------*/
+header .site-title {
+  font-size: 1.4rem;
+  line-height: normal;
+  letter-spacing: .5rem;
+  padding: 10px 0;
+  width: 100%;
+  color: #fdfcf6;
+  background-color: #931B3A; }
+
+/* Contents
+------------------------------------------------------------*/
+.photo {
+  height: 250px;
+  background-image: url(../images/img_main.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+
+section {
+  padding: 60px 0; }
+  section .container {
+    width: 90%; }
+
+#works {
+  background-color: #3A3837; }
+  #works .container {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+  #works h2 {
+    color: #fdfcf6;
+    margin-bottom: 60px; }
+  #works .works-box {
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #fdfcf6;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  #works i {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
+    padding-top: 15px;
+    background-color: #931B3A;
+    font-size: 4.5rem;
+    color: #FFF;
+    text-align: center;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%; }
+  #works h3 {
+    color: #931B3A;
+    margin-bottom: 10px;
+    font-size: 2.4rem;
+    font-weight: bold; }
+
+@media (min-width: 1025px) {
+  .photo {
+    height: 500px; }
+
+  #works .container {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between; }
+  #works .works-box {
+    margin: 0 10px; } }
+#contact {
+  background-color: #fdfcf6; }
+  #contact .join-button a {
+    font-size: 120%;
+    font-weight: bold;
+    background-color: #E2E2E1;
+    width: 60%;
+    height: 60px;
+    margin-top: 20px;
+    padding-top: 15px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  #contact .join-button a:hover {
+    background-color: #EFEFEF; }
+
+@media (min-width: 1025px) {
+  #contact .join-button a {
+    font-size: 150%;
+    width: 30%; } }
+#contact > h2 {
+  font-size: 1.5rem;
+  padding-bottom: 20px; }
+
+/* Footer
+------------------------------------------------------------*/
+footer {
+  background-color: #931B3A;
+  padding: 10px 0;
+  text-align: center;
+  color: #fdfcf6; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,212 @@
+@charset 'UTF-8';
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Averia+Gruesa+Libre);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #3A3837;
+$subColor: #fdfcf6;
+$sub2Color: #E2E2E1;
+$keyColor: #931B3A;
+$fontColor: #4c4c4c;
+
+
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em; 
+  background-color: $baseColor;
+}
+
+a {
+  @include link-colors($keyColor, lighten($keyColor, 5%), darken($keyColor, 10%), darken($keyColor, 10%));
+  text-decoration: none;
+}
+
+#works > h2{
+	color:$subColor;
+}
+
+#works > h2{
+	font-size:250%;
+	letter-spacing:2rem;
+}
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Font
+------------------------------------------------------------*/
+.Averia {
+  font-family: 'Averia Gruesa Libre', cursive;
+}
+.uppercase {
+  text-transform: capitalize; /*大文字表示・小文字表示を指定*/
+}
+
+
+/* Header
+------------------------------------------------------------*/
+
+header {
+  .site-title {
+    font-size: 1.4rem;
+    line-height: normal;
+	letter-spacing:.5rem;
+	@extend .block-center;
+	padding: 10px 0;
+	width:100%;
+	color:$subColor;
+	background-color:$keyColor;
+  }
+}
+
+/* Contents
+------------------------------------------------------------*/
+
+.photo{
+  @extend .block-center;
+  height:250px;
+  background-image: url(../images/img_main.jpg) ;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  }
+  
+// Common Styles
+section {
+  padding: 60px 0;
+  .container {
+    width: 90%;
+    @extend .block-center;
+  }
+}
+
+// Works
+#works {
+  background-color: $baseColor;
+  .container {
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column);    // スキルボックスを縦に並べる
+  }
+  h2 {
+    color: $subColor;
+    margin-bottom: 60px;
+  }
+  .works-box {
+    @include flex(1);
+    margin: 10px 0;                     // 上下にマージン
+    padding: 20px;
+    background-color: $subColor;
+    @include border-radius(4px);
+    @include box-sizing(border-box);
+  }
+  i {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
+    padding-top: 15px;
+    background-color: $keyColor;
+    font-size: 4.5rem;
+    color: #FFF;
+    text-align: center;
+    @include box-sizing(border-box);
+    @include border-radius(50%);
+    @extend .block-center;
+  }
+  h3 {
+    @extend .Averia;
+    @extend .uppercase;
+    color: $keyColor;
+    margin-bottom:10px;
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+}
+
+// desktop
+@media (min-width: 1025px) {
+
+  // メイン画像
+	.photo{
+	  height:500px;
+	  }
+
+  // Works
+  #works {
+    .container {
+      @include flex-direction(row);     // スキルボックスを横に並べる
+      justify-content: space-between;
+    }
+    .works-box {
+      margin: 0 10px;                   // 左右にマージン
+    }
+  }
+}
+
+
+#contact {
+	background-color:$subColor;
+	@extend .block-center;
+	.join-button a{
+		@extend .block-center;
+		font-size:120%;
+		font-weight:bold;
+		background-color:#E2E2E1;
+		width:60%;
+		height:60px;
+		margin-top:20px;
+		padding-top:15px;
+		@include border-radius(8px);
+		@include box-sizing(border-box);
+		}
+	.join-button a:hover{
+		background-color:#EFEFEF;
+	}
+}
+
+// desktop
+@media (min-width: 1025px) {
+
+  // 参加ボタン
+	#contact {
+		.join-button a{
+			font-size:150%;
+			width:30%;
+		}
+	}
+}
+
+#contact > h2{
+font-size:1.5rem;
+padding-bottom:20px;
+}
+
+/* Footer
+------------------------------------------------------------*/
+footer {
+  background-color: $keyColor;
+  padding: 10px 0;
+  text-align: center;
+  color: $subColor;
+}
